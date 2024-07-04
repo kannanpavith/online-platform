@@ -1,0 +1,16 @@
+{
+    "development": {
+      "username": "your_username",
+      "password": "your_password",
+      "database": "online_learning",
+      "host": "localhost",
+      "dialect": "postgres"
+    },
+    "test": {
+      ...
+    },
+    "production": {
+      ...
+    }
+  }
+  
