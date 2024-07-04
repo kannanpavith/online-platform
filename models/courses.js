@@ -1,25 +1,33 @@
-// models/enrollment.js
+// models/course.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Enrollment = sequelize.define('Enrollment', {
+const Course = sequelize.define('Course', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true
   },
-  user_id: {
+  title: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  description: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  instructor_id: {
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  course_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false
+  createdAt: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW
   },
-  enrolled_at: {
+  updatedAt: {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW
   }
 });
 
-module.exports = Enrollment;
+module.exports = Course;
